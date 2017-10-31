@@ -16,16 +16,7 @@ public class VoteControllerTest extends AbstractControllerTest {
     @InjectMocks
     private VoteController voteController;
 
-    @Test
-    public void testVote() throws Exception {
-        when(sessionManager.isSessionActive(SESSION_ID)).thenReturn(true);
-        voteController.vote(SESSION_ID, USER_NAME, ESTIMATE_VALUE);
-        inOrder.verify(sessionManager, times(1)).isSessionActive(SESSION_ID);
-        inOrder.verify(sessionManager, times(1)).getResults(SESSION_ID);
-        inOrder.verify(sessionManager, times(1)).registerEstimate(SESSION_ID, ESTIMATE);
-        inOrder.verify(messagingUtils, times(1)).burstResultsMessages(SESSION_ID);
-        inOrder.verifyNoMoreInteractions();
-    }
+
 
     @Test
     public void testVoteUserAlreadyVoted() throws Exception {

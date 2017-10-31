@@ -21,7 +21,7 @@ public class AppControllerTest {
 
     @Test
     public void getFeedbackRecipient() throws Exception {
-        assertEquals("richardashworth575@gmail.com", appController.getFeedbackRecipient());
+        assertEquals("nkraftor@skytouchtechnology.com", appController.getFeedbackRecipient());
     }
 
 }
