@@ -60,7 +60,7 @@ p {
 
 .votebutton {
     width: 200px;
-    height: 200px;
+    height: 100%;
     font-size: large;
     text-align: center;
 }
