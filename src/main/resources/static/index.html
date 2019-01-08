@@ -118,7 +118,17 @@
                                     <table cellspacing="20">
                                         <tr>
                                             <td data-ng-repeat="i in legalEstimates">
-                                                <button class="votebutton" ng-click="vote(i)">{{i}}<img src="images/animal-{{i}}.jpg" class="voteimage" style="width: 100%;"/></button>
+                                                <button class="votebutton" ng-click="vote(i)">
+                                                    <div ng-switch on=i>
+                                                        <div ng-switch-when="0">
+                                                            ?
+                                                        </div>
+                                                        <div ng-switch-default>
+                                                            {{i}}
+                                                        </div>
+                                                    </div>>
+                                                    {{i}}
+                                                    <img src="images/animal-{{i}}.jpg" class="voteimage" style="width: 100%;"/></button>
                                             </td>
                                         </tr>
                                     </table>
