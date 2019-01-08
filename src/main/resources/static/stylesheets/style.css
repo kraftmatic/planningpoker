@@ -61,12 +61,13 @@ p {
 .votebutton {
     width: 200px;
     height: 100%;
-    font-size: large;
+    font-size: 30px;
     text-align: center;
 }
 
 .voteimage {
     border-radius: 10px;
+    border-color: black;
 }
 
 .nextbutton {
