@@ -53,8 +53,10 @@ PlanningPoker.controller('PokerCtrl', ['$scope', '$http', function ($scope, $htt
     $scope.defaultItemText = 'the current item';
     $scope.currentItem = $scope.defaultItemText;
     $scope.itemInput = undefined;
-    $scope.legalEstimates = [1, 3, 5, 8, 13, 21, 0];
-    $scope.labels = $scope.legalEstimates.map(String);
+    $scope.legalEstimatesOne = [1, 3, 5, 8];
+    $scope.legalEstimatesTwo = [13, 21, 0];
+    $scope.labels = $scope.legalEstimatesOne.map(String);
+    $scope.labels += $scope.legalEstimatesTwo.map(String);
 
     $http({
         method: 'GET',
