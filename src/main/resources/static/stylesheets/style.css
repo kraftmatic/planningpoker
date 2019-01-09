@@ -68,15 +68,29 @@ p {
 
 .voteimage {
     border-radius: 10px;
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid black;
 }
 
 .nextbutton {
     width: 165px;
     height: 50px;
     font-size: large;
+}
+
+.history {
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: gainsboro;
+}
+
+.historyTitle {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #00004d;
 }
 
 #top {

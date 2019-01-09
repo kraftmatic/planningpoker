@@ -18,7 +18,6 @@
     <script src="javascript/app.js"></script>
 
     <meta name="description" content="Agile Estimation for Distributed Teams">
-    <meta name="author" content="Rich Ashworth">
 </head>
 
 <body ng-controller="PokerCtrl as poker">
@@ -249,6 +248,18 @@
                     </td>
                 </tr>
             </table>
+            <div class="history">
+                <table>
+                    <tr><td class="historyTitle">Session Item History</td></tr>
+                    <tr>
+                        <td style="padding: 10px;">
+                            <ul>
+                                <li data-ng-repeat="i in history">{{i}}</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 </div>

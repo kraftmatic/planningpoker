@@ -57,6 +57,7 @@ PlanningPoker.controller('PokerCtrl', ['$scope', '$http', function ($scope, $htt
     $scope.legalEstimatesOne = [1, 3, 5, 8];
     $scope.legalEstimatesTwo = [13, 21, 0];
     $scope.labels = $scope.legalEstimates.map(String);
+    $scope.history = [];
 
     $http({
         method: 'GET',
@@ -219,7 +220,7 @@ PlanningPoker.controller('PokerCtrl', ['$scope', '$http', function ($scope, $htt
     };
 
     $scope.setCurrentItem = function () {
-        const item = ($scope.itemInput && $scope.itemInput.length > 0) ? $scope.itemInput : $scope.defaultItemText;
+        item = ($scope.itemInput && $scope.itemInput.length > 0) ? $scope.itemInput : $scope.defaultItemText;
         $http({
             method: 'POST',
             url: '/setCurrentItem',
@@ -232,6 +233,9 @@ PlanningPoker.controller('PokerCtrl', ['$scope', '$http', function ($scope, $htt
     };
 
     $scope.reset = function () {
+        if ($scope.currentItem !== "Results"){
+            $scope.history.push($scope.currentItem);
+        }
         $scope.integerScale = true;
         $scope.loading = true;
         $scope.itemInput = undefined;
